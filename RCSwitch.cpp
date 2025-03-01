@@ -3,6 +3,7 @@
   Copyright (c) 2011 Suat Özgür.  All right reserved.
   
   Contributors:
+  - Soroush Sayyadi / s.sayyadi987(at)gmail(dot)com
   - Andre Koehler / info(at)tomate-online(dot)de
   - Gordeev Andrey Vladimirovich / gordeev(at)openpyro(dot)com
   - Skineffect / http://forum.ardumote.com/viewtopic.php?f=2&t=46
@@ -15,7 +16,7 @@
   - Vlad Gheorghe / <first name>.<last name>(at)gmail(dot)com https://github.com/vgheo
   - Matias Cuenca-Acuna 
   
-  Project home: https://github.com/sui77/rc-switch/
+  Project home: https://github.com/SorSayyadi/RC-Switch-easily-clone-any-remote
 
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
@@ -518,6 +519,44 @@ void RCSwitch::send(unsigned long code, unsigned int length) {
   }
 
   // Disable transmit after sending (i.e., for inverted protocols)
+  digitalWrite(this->nTransmitterPin, LOW);
+
+#if not defined( RCSwitchDisableReceiving )
+  // enable receiver again if we just disabled it
+  if (nReceiverInterrupt_backup != -1) {
+    this->enableReceive(nReceiverInterrupt_backup);
+  }
+#endif
+}
+
+void RCSwitch::sendRaw(unsigned int* sequence, int sequenceLength, int repeat) {
+	if (this->nTransmitterPin == -1)
+    return;
+
+#if not defined( RCSwitchDisableReceiving )
+  // make sure the receiver is disabled while we transmit
+  int nReceiverInterrupt_backup = nReceiverInterrupt;
+  if (nReceiverInterrupt_backup != -1) {
+    this->disableReceive();
+  }
+#endif
+
+    for (int i = 0; i < repeat; i++) {
+        for (int j = 0; j < sequenceLength; j++) {
+            // Disable interrupts only for the duration of the pulse
+            noInterrupts();
+            digitalWrite(this->nTransmitterPin, LOW);
+            delayMicroseconds(sequence[j]);
+            digitalWrite(this->nTransmitterPin, HIGH);
+            interrupts();
+
+            // Delay for the low pulse (no need to disable interrupts here)
+            delayMicroseconds(sequence[j + 1]);
+
+            j++; // Skip the next element since it's the low pulse duration
+        }
+    }
+	// Disable transmit after sending (i.e., for inverted protocols)
   digitalWrite(this->nTransmitterPin, LOW);
 
 #if not defined( RCSwitchDisableReceiving )
