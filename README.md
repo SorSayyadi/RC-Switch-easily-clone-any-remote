@@ -5,7 +5,7 @@ Arduino lib to clone and replicate 433/315Mhz devices that are not using standar
 
 ## Wiki
 I don't know why everyone make it so hard to explain how to replicate a signal so I created this branch and explained in the following wiki link how to find and replicate the signal.
-[https://github.com/sui77/rc-switch/wiki](https://github.com/SorSayyadi/RC-Switch-easily-clone-any-remote/wiki)
+[https://github.com/SorSayyadi/RC-Switch-easily-clone-any-remote](https://github.com/SorSayyadi/RC-Switch-easily-clone-any-remote/wiki)
 
 ## Info
 ### Sending and Receiving RC codes
