@@ -18,3 +18,4 @@ yours doesn't work, you might need to adjust the pulse length.
 
 All you need is a Arduino or Raspberry Pi, a 315/433MHz Transmitter module, a 315/433MHz receiver.
 
+The original librari is [here](https://github.com/sui77/rc-switch)
