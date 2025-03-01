@@ -8,6 +8,8 @@ I don't know why everyone make it so hard to explain how to replicate a signal s
 [https://github.com/SorSayyadi/RC-Switch-easily-clone-any-remote](https://github.com/SorSayyadi/RC-Switch-easily-clone-any-remote/wiki)
 
 ## Info
+You just need to scan your code and then replicate it with your device, all the info is available in wiki page.
+
 ### Sending and Receiving RC codes
 
 Use your Arduino or Raspberry Pi to operate remote radio controlled devices.
