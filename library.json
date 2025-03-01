@@ -1,15 +1,15 @@
 {
-  "name": "rc-switch",
-  "description": "Use your Arduino or Raspberry Pi to operate remote radio controlled devices",
-  "keywords": "rf, radio, wireless",
+  "name": "RC-Switch-easily-clone-any-remote",
+  "description": "Arduino lib to clone and replicate 433/315Mhz devices that are not using standard protocols.",
+  "keywords": "rf, radio, wireless, replicate-rf",
   "authors":
   {
-    "name": "Suat Ozgur"
+    "name": "Soroush Sayyadi"
   },
   "repository":
   {
     "type": "git",
-    "url": "https://github.com/sui77/rc-switch.git"
+    "url": "https://github.com/SorSayyadi/RC-Switch-easily-clone-any-remote"
   },
   "version": "2.6.4",
   "frameworks": [
