@@ -19,6 +19,7 @@ switchOn		KEYWORD2
 switchOff		KEYWORD2
 sendTriState		KEYWORD2
 send			KEYWORD2
+sendRaw			KEYWORD2
 ##########
 #SENDS End
 ##########
