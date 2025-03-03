@@ -4,8 +4,9 @@
 Arduino lib to clone and replicate 433/315Mhz devices that are not using standard protocols.
 
 ## Wiki
-I don't know why everyone make it so hard to explain how to replicate a signal so I created this branch and explained in the following wiki link how to find and replicate the signal.
-[https://github.com/SorSayyadi/RC-Switch-easily-clone-any-remote](https://github.com/SorSayyadi/RC-Switch-easily-clone-any-remote/wiki)
+I don't know why everyone make it so hard to explain how to replicate a signal so I created this branch and explained in the following [wiki link](https://github.com/SorSayyadi/RC-Switch-easily-clone-any-remote/wiki/Cloning-a-new-remote) how to find and replicate the signal.
+
+https://github.com/SorSayyadi/RC-Switch-easily-clone-any-remote/wiki/Cloning-a-new-remote
 
 ## Info
 You just need to scan your code and then replicate it with your device, all the info is available in wiki page.
